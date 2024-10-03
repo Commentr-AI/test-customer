@@ -10,7 +10,7 @@ const Home = () => {
   const checkUser = async () => {
     try {
       const response = await axios.get(
-        "http://localhost:4000/api/v1/users/getUser",
+        "https://api-c8tq.onrender.com/api/v1/users/getUser",
         {
           withCredentials: true,
         }
@@ -27,14 +27,14 @@ const Home = () => {
 
   // Function to handle login with Reddit
   const handleLoginWithReddit = () => {
-    window.location.href = "http://localhost:4000/auth/reddit";
+    window.location.href = "https://api-c8tq.onrender.com/auth/reddit";
   };
 
   // Function to log out the user
   const logoutUser = async () => {
     try {
       const response = await axios.get(
-        "http://localhost:4000/api/v1/users/logout",
+        "https://api-c8tq.onrender.com/api/v1/users/logout",
         {
           withCredentials: true,
         }
@@ -50,7 +50,7 @@ const Home = () => {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "http://localhost:4000/api/v1/users/login",
+        "https://api-c8tq.onrender.com/api/v1/users/login",
         { email: username, password }
         //{ withCredentials: true }
       );
